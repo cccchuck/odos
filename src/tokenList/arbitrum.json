@@ -1,0 +1,303 @@
+[
+  {
+    "tokenName": "ETH",
+    "tokenAddr": "0x0000000000000000000000000000000000000000",
+    "tokenValue": 0.02,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "ELK",
+    "tokenAddr": "0xeEeEEb57642040bE42185f49C52F7E9B38f8eeeE",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "DF",
+    "tokenAddr": "0xae6aab43c4f3e0cea4ab83752c278f8debaba689",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 5
+  },
+  {
+    "tokenName": "rETH",
+    "tokenAddr": "0xec70dcb4a1efa46b8f2d97c310c9c4790ba5ffa8",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "GMX",
+    "tokenAddr": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "USDT",
+    "tokenAddr": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+    "tokenValue": 0,
+    "tokenDecimal": 6,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "GRT",
+    "tokenAddr": "0x23a941036ae778ac51ab04cea08ed6e2fe103614",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "LPT",
+    "tokenAddr": "0x289ba1701c2f088cf0faf8b3705246331cb8a839",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "SWPR",
+    "tokenAddr": "0xde903e2712288a1da82942dddf2c20529565ac30",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "RPL",
+    "tokenAddr": "0xb766039cc6db368759c1e56b79affe831d0cc507",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "L2DAO",
+    "tokenAddr": "0x2cab3abfc1670d1a452df502e216a66883cdf079",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "DODO",
+    "tokenAddr": "0x69eb4fa4a2fbd498c257c57ea8b7655a2559a581",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "TCR",
+    "tokenAddr": "0xa72159fc390f0e3c6d415e658264c7c4051e9b87",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "SYN",
+    "tokenAddr": "0x080f6aed32fc474dd5717105dba5ea57268f46eb",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "CRV",
+    "tokenAddr": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "SUSHI",
+    "tokenAddr": "0xd4d42f0b6def4ce0383636770ef773390d85c61a",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "ADoge",
+    "tokenAddr": "0x155f0dd04424939368972f4e1838687d6a831151",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "UNI",
+    "tokenAddr": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "VST",
+    "tokenAddr": "0x64343594ab9b56e99087bfa6f2335db24c2d1f17",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "LINK",
+    "tokenAddr": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "NYAN",
+    "tokenAddr": "0xed3fb761414da74b74f33e5c5a1f78104b188dfc",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "CAP",
+    "tokenAddr": "0x031d35296154279dc1984dcd93e392b1f946737b",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "MCB",
+    "tokenAddr": "0x4e352cf164e64adcbad318c3a1e222e9eba4ce42",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "BAL",
+    "tokenAddr": "0x040d1edc9569d4bab2d15287dc5a4f10f56a56b8",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "SEPLL",
+    "tokenAddr": "0x3e6648c5a70a150a88bce65f4ad4d506fe15d2af",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "VSTA",
+    "tokenAddr": "0xa684cd057951541187f288294a1e1c2646aa2d24",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "STG",
+    "tokenAddr": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "DAI",
+    "tokenAddr": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "JONES",
+    "tokenAddr": "0x10393c20975cf177a3513071bc110f7962cd67da",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "USX",
+    "tokenAddr": "0x641441c631e2f909700d2f41fd87f0aa6a6b4edb",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "FXS",
+    "tokenAddr": "0x9d2f299715d94d8a7e6f5eaa8e654e8c74a988a7",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "gOHM",
+    "tokenAddr": "0x8d9ba570d6cb60c7e3e0f31343efe75ab8e65fb1",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "RDPX",
+    "tokenAddr": "0x32eb7902d4134bf98a28b963d26de779af92a212",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "MAGIC",
+    "tokenAddr": "0x539bde0d7dbd336b79148aa742883198bbf60342",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "MIM",
+    "tokenAddr": "0xfea7a6a0b346362bf88a9e4a88416b77a57d6c2a",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "USDC",
+    "tokenAddr": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+    "tokenValue": 0,
+    "tokenDecimal": 6,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "DPX",
+    "tokenAddr": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "FRAX",
+    "tokenAddr": "0x17fc002b466eec40dae837fc4be5c67993ddbd6f",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "wETH",
+    "tokenAddr": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "EURS",
+    "tokenAddr": "0xd22a58f79e9481d1a88e00c343885a588b34b68b",
+    "tokenValue": 0,
+    "tokenDecimal": 2,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "UMAMI",
+    "tokenAddr": "0x1622bf67e6e5747b81866fe0b85178a93c7f86e3",
+    "tokenValue": 0,
+    "tokenDecimal": 9,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "wBTC",
+    "tokenAddr": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+    "tokenValue": 0,
+    "tokenDecimal": 8,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "ETH",
+    "tokenAddr": "0x0000000000000000000000000000000000000000",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  }
+]

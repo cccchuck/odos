@@ -1,0 +1,54 @@
+[
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          { "internalType": "uint256", "name": "amountIn", "type": "uint256" },
+          { "internalType": "address", "name": "receiver", "type": "address" },
+          { "internalType": "bytes", "name": "permit", "type": "bytes" }
+        ],
+        "internalType": "struct OdosRouter.inputToken[]",
+        "name": "inputs",
+        "type": "tuple[]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "relativeValue",
+            "type": "uint256"
+          },
+          { "internalType": "address", "name": "receiver", "type": "address" }
+        ],
+        "internalType": "struct OdosRouter.outputToken[]",
+        "name": "outputs",
+        "type": "tuple[]"
+      },
+      { "internalType": "uint256", "name": "valueOutQuote", "type": "uint256" },
+      { "internalType": "uint256", "name": "valueOutMin", "type": "uint256" },
+      { "internalType": "address", "name": "executor", "type": "address" },
+      { "internalType": "bytes", "name": "pathDefinition", "type": "bytes" }
+    ],
+    "name": "swap",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "amountsOut",
+        "type": "uint256[]"
+      },
+      { "internalType": "uint256", "name": "gasLeft", "type": "uint256" }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]
