@@ -1,0 +1,86 @@
+[
+  {
+    "tokenName": "MAGIC",
+    "tokenAddr": "0x539bde0d7dbd336b79148aa742883198bbf60342",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "LINK",
+    "tokenAddr": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "GMX",
+    "tokenAddr": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "DPX",
+    "tokenAddr": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "LPT",
+    "tokenAddr": "0x289ba1701c2f088cf0faf8b3705246331cb8a839",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "UMAMI",
+    "tokenAddr": "0x1622bf67e6e5747b81866fe0b85178a93c7f86e3",
+    "tokenValue": 0,
+    "tokenDecimal": 9,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "JONES",
+    "tokenAddr": "0x10393c20975cf177a3513071bc110f7962cd67da",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "VSTA",
+    "tokenAddr": "0xa684cd057951541187f288294a1e1c2646aa2d24",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "SYN",
+    "tokenAddr": "0x080f6aed32fc474dd5717105dba5ea57268f46eb",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "ELK",
+    "tokenAddr": "0xeEeEEb57642040bE42185f49C52F7E9B38f8eeeE",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "SWPR",
+    "tokenAddr": "0xde903e2712288a1da82942dddf2c20529565ac30",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 1
+  },
+  {
+    "tokenName": "MYC",
+    "tokenAddr": "0xc74fe4c715510ec2f8c61d70d397b32043f55abe",
+    "tokenValue": 0,
+    "tokenDecimal": 18,
+    "tokenSlippage": 3
+  }
+]

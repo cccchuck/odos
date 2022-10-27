@@ -34,7 +34,7 @@ function sleep(ms: number) {
 async function getNeedContract(
   privateKey: string,
   fromTokenAddr: string,
-  toTokenAddr: string
+  toTokenAddr: string,
 ) {
   const wallet = new ethers.Wallet(privateKey, provider)
   const odos = new ethers.Contract(odosAddr, odosABI, wallet)
@@ -65,7 +65,7 @@ async function getGasPrice(): Promise<number | null> {
         headers: {
           'Content-Type': 'application/json',
         },
-      }
+      },
     )
   }
 
@@ -95,7 +95,7 @@ async function getSwapArguments(
   toTokens: string[],
   userAddress: string,
   chain: string = 'arbitrum',
-  slippageAmount: number = 1
+  slippageAmount: number = 1,
 ): Promise<ISwapArgus | null> {
   console.log('Get Swap Arguments')
   // const gasPrice = await getGasPrice()
@@ -163,7 +163,7 @@ async function approve(token: Contract, owner: string, spender: string) {
   if (allowance.toBigInt() < BigInt(200000000 * 10 ** 18)) {
     console.log(`approve allowance due to insufficient allowance`)
     const approveAllowance = BigNumber.from(
-      '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+      '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
     )
 
     const approveTx = await token.approve(odosAddr, approveAllowance, {
@@ -188,7 +188,7 @@ async function swapToken2Token(
   fromTokenValue: number,
   toTokenName: string,
   toTokenAddr: string,
-  toTokenDecimal: number
+  toTokenDecimal: number,
 ) {
   let balance
   let passedTokenValue = fromTokenValue !== 0
@@ -196,7 +196,7 @@ async function swapToken2Token(
   const { wallet, odos, fromTokenContract } = await getNeedContract(
     privateKey,
     fromTokenAddr,
-    toTokenAddr
+    toTokenAddr,
   )
 
   const userAddress = await wallet.getAddress()
@@ -206,7 +206,7 @@ async function swapToken2Token(
   if (fromTokenValue === 0) {
     balance = await fromTokenContract.balanceOf(userAddress)
     fromTokenValue = parseFloat(
-      ethers.utils.formatUnits(balance, fromTokenDecimal)
+      ethers.utils.formatUnits(balance, fromTokenDecimal),
     )
   }
 
@@ -218,13 +218,13 @@ async function swapToken2Token(
     [toTokenAddr],
     userAddress,
     chainID,
-    fromTokenSlippage
+    fromTokenSlippage,
   )
 
   if (swapArguments) {
     if (passedTokenValue) {
       swapArguments.inputs[0].amountIn = parseEther(
-        swapArguments.inputs[0].amountIn.toString()
+        swapArguments.inputs[0].amountIn.toString(),
       )
     } else {
       // Use Contract Balance
@@ -238,27 +238,27 @@ async function swapToken2Token(
         swapArguments.valueOutQuote.toString().indexOf('.') + 1 + toTokenDecimal
       swapArguments.valueOutQuote = parseUnits(
         swapArguments.valueOutQuote.toString().slice(0, index),
-        toTokenDecimal
+        toTokenDecimal,
       )
       swapArguments.valueOutMin = parseUnits(
         swapArguments.valueOutMin.toString().slice(0, index),
-        toTokenDecimal
+        toTokenDecimal,
       )
     } else {
       swapArguments.valueOutQuote = parseUnits(
         swapArguments.valueOutQuote.toString(),
-        toTokenDecimal
+        toTokenDecimal,
       )
       swapArguments.valueOutMin = parseUnits(
         swapArguments.valueOutMin.toString(),
-        toTokenDecimal
+        toTokenDecimal,
       )
     }
 
     console.log(
       `swaping ${swapArguments.inputs[0].amountIn.toString()} ${fromTokenName} for ${
         swapArguments.valueOutQuote
-      } ${toTokenName}`
+      } ${toTokenName}`,
     )
 
     if (fromTokenAddr === '0x0000000000000000000000000000000000000000')
@@ -272,7 +272,7 @@ async function swapToken2Token(
         swapArguments.valueOutMin,
         swapArguments.executor,
         swapArguments.pathDefinition,
-        swapArguments.override
+        swapArguments.override,
       )
 
       await swapToken2TokenTx.wait()
@@ -290,4 +290,102 @@ async function swapToken2Token(
   }
 }
 
-export { getSwapArguments, swapToken2Token, getGasPrice, sleep }
+async function getETHAmount(
+  fromTokens: string,
+  fromValues: number,
+  walletAddress: string,
+) {
+  console.log('Get ETH Amount')
+  const URL = 'request-path'
+
+  const data = {
+    chain: 'arbitrum',
+    fromTokens: [fromTokens],
+    fromValues: [fromValues],
+    gasPrice: 0.1,
+    lpBlacklist: [],
+    slippageAmount: 1,
+    toTokens: ['0x0000000000000000000000000000000000000000'],
+    walletAddress,
+  }
+
+  const resp = await request.post(URL, data)
+
+  if (resp.status !== 200) return null
+
+  const value = resp.data.outValues[0]
+
+  console.log('Get ETH Done')
+  return value
+}
+
+async function swapETH2Token(
+  privateKey: string,
+  toTokenName: string,
+  toTokenAddr: string,
+  toTokenDecimal: number,
+) {
+  // 0. 获取钱包地址 & Odos
+  const wallet = new ethers.Wallet(privateKey, provider)
+  const userAddress = await wallet.getAddress()
+  const odos = new ethers.Contract(odosAddr, odosABI, wallet)
+
+  // 1. 获取 ETH 数量
+  const ethAmount = await getETHAmount(toTokenAddr, 0.012, userAddress)
+
+  // 2. 获取 Swap 数据，交易额较小，滑点为 5
+  const swapArguments = await getSwapArguments(
+    [ethAmount],
+    ['0x0000000000000000000000000000000000000000'],
+    [toTokenAddr],
+    userAddress,
+    chainID,
+    5,
+  )
+
+  // console.log(swapArguments)
+
+  // 3. Swap ETH to Token
+  if (swapArguments) {
+    swapArguments.override.value = parseEther(ethAmount.toString())
+
+    swapArguments.inputs[0].amountIn = parseEther(
+      swapArguments.inputs[0].amountIn.toString(),
+    )
+
+    swapArguments.valueOutQuote = parseUnits(
+      swapArguments.valueOutQuote.toString(),
+      toTokenDecimal,
+    )
+    swapArguments.valueOutMin = parseUnits(
+      swapArguments.valueOutMin.toString(),
+      toTokenDecimal,
+    )
+
+    console.log(swapArguments)
+
+    try {
+      const swapTx = await odos.callStatic.swap(
+        swapArguments.inputs,
+        swapArguments.outputs,
+        swapArguments.valueOutQuote,
+        swapArguments.valueOutMin,
+        swapArguments.executor,
+        swapArguments.pathDefinition,
+        swapArguments.override,
+      )
+
+      console.log(swapTx)
+
+      // await swapTx.wait()
+
+      // const hash = `Tx Hash: https://arbiscan.io/tx/${swapTx.hash}`
+
+      // console.log(`[${userAddress}]: ${hash}`)
+    } catch (error) {
+      console.error('Error: ', error)
+    }
+  }
+}
+
+export { getSwapArguments, swapToken2Token, swapETH2Token, getGasPrice, sleep }
